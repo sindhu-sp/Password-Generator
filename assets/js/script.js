@@ -36,22 +36,13 @@ function generatePassword() {
     while (userPrompt < 8 || userPrompt > 128) {
         userPrompt = parseInt(prompt("Choose a number between 8 and 128"));
     }
-
-    numericChar = confirm("Is this going to have numbers");
-    uppercaseChar = confirm("Is this going to have uppercase");
-    lowercaseChar = confirm("Is this going to have lowercase");
-    specialChar = confirm("Is this going to have special character");
+    selectChoice();
 
     // If the user didnt choose any variables types for creating the password
     while (!numericChar && !uppercaseChar && !lowercaseChar && !specialChar) {
-        userPrompt = alert("Choose some condition");
-
-
-        numericChar = confirm("Is this going to have numbers");
-        uppercaseChar = confirm("Is this going to have uppercase");
-        lowercaseChar = confirm("Is this going to have lowercase");
-        specialChar = confirm("Is this going to have special character");
-    }
+        alert("Choose some condition");
+        selectChoice();
+    };
 
     // Selection of random variables
     var pass = [];
@@ -72,7 +63,6 @@ function generatePassword() {
 
     // console.log(array);
     for (var i = 0; i < userPrompt; i++) {
-
         var randomArray = array[Math.floor(Math.random() * array.length)];
         var randomChar = randomArray[Math.floor(Math.random() * (randomArray.length))];
         pass.push(randomChar);
@@ -86,7 +76,14 @@ function generatePassword() {
     function userInput(password) {
         document.getElementById("password").textContent = password;
     }
+}
 
+// Function to repeat the user prompts if the conditions didnt meet
+function selectChoice() {
+    numericChar = confirm("Is this going to have numbers");
+    uppercaseChar = confirm("Is this going to have uppercase");
+    lowercaseChar = confirm("Is this going to have lowercase");
+    specialChar = confirm("Is this going to have special character");
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -106,7 +103,7 @@ generateBtn.addEventListener("click", writePassword);
 var copyBtn = document.querySelector("#copy");
 
 // Copy password to the #clipboard 
-function copyPassword () {
+function copyPassword() {
     document.getElementById("password").select();
     document.execCommand("copy");
     alert("Your password is copied to clipboard");
@@ -114,5 +111,3 @@ function copyPassword () {
 
 // Add event listener to copy button
 copyBtn.addEventListener("click", copyPassword);
-
-
