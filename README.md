@@ -28,7 +28,7 @@ _ If the user didnt choose any criteria and skipped all the criteria, the user w
 
 ## My Password-Generator Mock up
 
-<img src="./assets/password-generator.png " alt="password generator" height = 300 width= 200 />
+<img src="./assets/password-generator.png " alt="password generator" height = 300 width= 500 />
 
 ## Technologies Used:
 - HTML
