@@ -23,6 +23,7 @@ var special = ["~", "@", "$", "%", "^", "&", "*", "(", ")", "_"];
 // Other user choices
 var userChoice;
 
+// Validating user Input
 // password function
 function generatePassword() {
   userPrompt = Number(prompt("How many characters would you like for the password? Choose between 8 and 128"));
@@ -54,7 +55,7 @@ function generatePassword() {
     array.push(number);
   }
 
-  // console.log(array);
+  
   for (var i = 0; i < userPrompt; i++) {
     var randomArray = array[Math.floor(Math.random() * array.length)];
     var randomChar = randomArray[Math.floor(Math.random() * (randomArray.length))];
