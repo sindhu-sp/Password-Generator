@@ -24,7 +24,7 @@ so that a strong password is created that provides greater security.
 
 - In this challenge, the user prompt doesnt take in any value for the lenth of the password, except integers between 8 and 128. It keeps prompting the user until the criteria is met if the user enters anything else.
 
-_ If the user didnt choose any criteria and skipped all the criteria, the user will be prompted to choose a criteria to generate the password.
+- If the user didnt choose any criteria and skipped all the criteria, the user will be prompted to choose a criteria to generate the password.
 
 ## My Password-Generator Mock up
 
